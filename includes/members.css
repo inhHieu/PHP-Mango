@@ -1,0 +1,133 @@
+.mbContainer {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 94vh;
+  background-color: rgb(255, 255, 255);
+}
+.mbContainer #mbCarousel .item {
+  height: 94vh;
+}
+.mbContainer .carousel-control {
+  opacity: 1;
+  width: 4%;
+}
+.mbContainer .carousel-control.left {
+  background-image: none;
+  text-shadow: none;
+  color: black;
+  z-index: 9999;
+}
+.mbContainer .carousel-control.right {
+  background-image: none;
+  text-shadow: none;
+}
+.mbContainer .carousel-indicators .active {
+  background-color: black;
+}
+.mbContainer .carousel-indicators li {
+  border: 1px solid rgb(0, 0, 0);
+}
+.mbContainer .infoCard {
+  display: grid;
+  place-content: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+.mbContainer .infoCard .card-contentWrap {
+  height: 600px;
+  width: 600px;
+}
+.mbContainer .infoCard .card-contentWrap .info {
+  margin: 0 auto;
+  width: 550px;
+  display: flex;
+  align-items: center;
+}
+.mbContainer .infoCard .card-contentWrap .info .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+.mbContainer .infoCard .card-contentWrap .info .avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mbContainer .infoCard .card-contentWrap .info .cardName {
+  text-align: center;
+  margin: 0 auto;
+}
+.mbContainer .infoCard .card-contentWrap .info .cardName .name {
+  font-size: 28px;
+  font-weight: 500;
+  position: relative;
+}
+.mbContainer .infoCard .card-contentWrap .info .cardName span {
+  position: absolute;
+  bottom: -35%;
+  right: 10%;
+  font-size: 16px;
+  font-weight: 300;
+}
+.mbContainer .infoCard .card-contentWrap .info .cardName .quote {
+  font-weight: 500;
+  font-size: 16px;
+}
+.mbContainer .infoCard .card-contentWrap .works {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  height: 63%;
+}
+.mbContainer .infoCard .card-contentWrap .works ul {
+  padding: 0;
+  overflow: none;
+}
+.mbContainer .infoCard .card-contentWrap .works ul p {
+  text-align: center;
+  font-weight: 500;
+}
+.mbContainer .infoCard .card-contentWrap .works ul li {
+  display: block;
+}
+.mbContainer .infoCard .card-contentWrap .works ul li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  padding: 15px 30px;
+  width: 130px;
+  height: 100%;
+  transition: 0.5s;
+}
+.mbContainer .infoCard .card-contentWrap .works ul li a:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.mbContainer #i4cDan,
+.mbContainer #i4cTai {
+  opacity: 0;
+}
+.mbContainer #i4cDan,
+.mbContainer #i4cTai,
+.mbContainer #i4cHieu {
+  transition: 1.3s ease-in-out;
+}
+.mbContainer #i4cHieu {
+  z-index: 1000;
+}
+
+ul:before {
+  content: attr(aria-label);
+  font-size: 120%;
+  font-weight: bold;
+  margin-left: -15px;
+}/*# sourceMappingURL=members.css.map */

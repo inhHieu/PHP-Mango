@@ -1,0 +1,150 @@
+@mixin center {
+    display: grid;
+    place-content: center;
+}
+.mbContainer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 94vh;
+    background-color: rgb(255, 255, 255);
+    #mbCarousel {
+        .item {
+            height: 94vh;
+        }
+    }
+    .carousel-control {
+        opacity: 1;
+        width: 4%;
+    }
+    .carousel-control.left {
+        background-image: none;
+        text-shadow: none;
+        color: black;
+        z-index: 9999;
+    }
+    .carousel-control.right {
+        background-image: none;
+        text-shadow: none;
+    }
+    .carousel-indicators .active {
+        background-color: black;
+    }
+    .carousel-indicators li {
+        border: 1px solid rgb(0, 0, 0);
+    }
+    .infoCard {
+        @include center();
+        position: absolute;
+        top: 0;
+        // display: block;
+        height: 100%;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 1);
+        transition: .5s;
+        .card-contentWrap {
+            // background-color: aqua;
+            height: 600px;
+            width: 600px;
+            .info {
+                margin: 0 auto;
+                width: 550px;
+                display: flex;
+                align-items: center;
+                // justify-content:  ;
+                .avatar {
+                    // margin-right: 50px;
+                    width: 200px;
+                    height: 200px;
+                    // display: block;
+                    border-radius: 50%;
+                    background-color: rgb(0, 0, 0);
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .cardName {
+                    text-align: center;
+                    margin: 0 auto;
+                    .name {
+                        font-size: 28px;
+                        font-weight: 500;
+                        position: relative;
+                    }
+                    span {
+                        position: absolute;
+                        bottom: -35%;
+                        right: 10%;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                    .quote {
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .works {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                height: 63%;
+                // background-color: red;
+                // overflow-x: auto;
+                // position: relative;
+                ul {
+                    padding: 0;
+                    overflow: none;
+                    // background-color: rgba(255, 255, 255, 0.586);
+                    p {
+                        text-align: center;
+                        font-weight: 500;
+                        // top: -5px;
+                        // position: sticky;
+                        // padding: 10px 20px;
+                        // z-index: 100;
+                    }
+                    li {
+                        display: block;
+                        // margin-top: 10px;
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            text-align: center;
+                            color: black;
+                            padding: 15px 30px;
+                            width: 130px;
+                            height: 100%;
+                            transition: 0.5s;
+                            &:hover {
+                                background-color: rgb(0, 0, 0);
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #i4cDan,
+    #i4cTai {
+        opacity: 0;
+    }
+    #i4cDan,
+    #i4cTai,
+    #i4cHieu {
+        transition: 1.3s ease-in-out;
+    }
+    #i4cHieu {
+        z-index: 1000;
+    }
+}
+ul:before {
+    content: attr(aria-label);
+    font-size: 120%;
+    font-weight: bold;
+    margin-left: -15px;
+}
