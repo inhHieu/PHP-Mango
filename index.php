@@ -1,5 +1,5 @@
 <?php # Script 3.4 - index.php
-$page_title = 'Welcome to this Site!';
+$page_title = 'MANGO - Homepage';
 include('includes/header.html');
 ?>
 

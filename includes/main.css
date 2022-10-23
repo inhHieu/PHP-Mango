@@ -2,6 +2,10 @@
     /* margin: 0; */
 	font-family: 'Montserrat', sans-serif;
 }
+::selection {
+    color: black;
+    background: #fff200;
+  }
 ::-webkit-scrollbar {
 width: 10px;
 }

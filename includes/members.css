@@ -94,6 +94,7 @@
 .mbContainer .infoCard .card-contentWrap .works ul p {
   text-align: center;
   font-weight: 500;
+  cursor: default;
 }
 .mbContainer .infoCard .card-contentWrap .works ul li {
   display: block;
@@ -122,7 +123,7 @@
   transition: 1.3s ease-in-out;
 }
 .mbContainer #i4cHieu {
-  z-index: 1000;
+  z-index: 1;
 }
 
 ul:before {

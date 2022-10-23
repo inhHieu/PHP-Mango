@@ -1,5 +1,5 @@
 <?php # Script 3.4 - index.php
-$page_title = 'Welcome to this Site!';
+$page_title = 'MANGO - Members';
 include('includes/header.html');
 ?>
 
@@ -32,7 +32,7 @@ include('includes/header.html');
                         <img src="img/avatarH.jpg" alt="">
                     </div>
                     <div class="cardName">
-                        <p class="name">NGUYỄN MINH HIẾU<span class="id">61130300</span></p>
+                        <p class="name">Nguyễn Minh Hiếu<span class="id">61130300</span></p>
                         <p class="quote">"Bạn không sai là tôi sai" - GigaHieu</p>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ include('includes/header.html');
                     <div class="cardName">
                         <p class="name">Võ Thành Tài<span class="id">61131611</span></p>
                         
-                        <p class="quote">"Hồi xưa tao với ẻm..." - TàiSi</p>
+                        <p class="quote">"Hồi xưa tao với em ấy..." - TàiSi</p>
                     </div>
                 </div>
                 <div class="works">
@@ -207,6 +207,7 @@ include('includes/header.html');
 
 
 
+<script src="includes/members.js"></script>
 <?php
 include('includes/footer.html');
 ?>

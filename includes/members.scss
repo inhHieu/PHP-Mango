@@ -29,9 +29,11 @@
     }
     .carousel-indicators .active {
         background-color: black;
+        // z-index: 1999;
     }
     .carousel-indicators li {
         border: 1px solid rgb(0, 0, 0);
+        // z-index: 1999;
     }
     .infoCard {
         @include center();
@@ -102,6 +104,7 @@
                     p {
                         text-align: center;
                         font-weight: 500;
+                        cursor: default;
                         // top: -5px;
                         // position: sticky;
                         // padding: 10px 20px;
@@ -139,7 +142,7 @@
         transition: 1.3s ease-in-out;
     }
     #i4cHieu {
-        z-index: 1000;
+        z-index: 1;
     }
 }
 ul:before {
