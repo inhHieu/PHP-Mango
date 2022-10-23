@@ -1,0 +1,164 @@
+.email {
+  margin: 0 auto;
+  width: 1000px;
+  height: 600px;
+}
+.email .bigform {
+  display: flex;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+  justify-content: center;
+}
+.email .bigform .form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 25%;
+  -webkit-animation: leftside 1s ease-out 1s forwards;
+          animation: leftside 1s ease-out 1s forwards;
+}
+.email .bigform .form .input,
+.email .bigform .form .textarea {
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+}
+.email .bigform .form .input .placeholder,
+.email .bigform .form .textarea .placeholder {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 6px;
+  top: 3.2em;
+  left: 1em;
+  z-index: 1;
+  transition: 0.1s;
+}
+.email .bigform .form .input input,
+.email .bigform .form .input textarea,
+.email .bigform .form .textarea input,
+.email .bigform .form .textarea textarea {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 30px;
+  border: thin solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  color: white;
+  resize: none;
+  z-index: 2;
+}
+.email .bigform .form .input input:focus,
+.email .bigform .form .input textarea:focus,
+.email .bigform .form .textarea input:focus,
+.email .bigform .form .textarea textarea:focus {
+  border: solid thin white;
+}
+.email .bigform .form .input input:valid,
+.email .bigform .form .input textarea:valid,
+.email .bigform .form .textarea input:valid,
+.email .bigform .form .textarea textarea:valid {
+  border-bottom: thin solid white;
+}
+.email .bigform .form .input input:focus ~ .placeholder, .email .bigform .form .input input:valid ~ .placeholder,
+.email .bigform .form .input textarea:focus ~ .placeholder,
+.email .bigform .form .input textarea:valid ~ .placeholder,
+.email .bigform .form .textarea input:focus ~ .placeholder,
+.email .bigform .form .textarea input:valid ~ .placeholder,
+.email .bigform .form .textarea textarea:focus ~ .placeholder,
+.email .bigform .form .textarea textarea:valid ~ .placeholder {
+  top: 1.5em;
+  left: 1em;
+  color: white;
+  z-index: 3;
+}
+.email .bigform .form .input input,
+.email .bigform .form .textarea input {
+  height: 50px;
+  padding: 10px 20px;
+}
+.email .bigform .form .input textarea,
+.email .bigform .form .textarea textarea {
+  height: 300px;
+  padding: 20px 20px;
+}
+.email .bigform .form .button {
+  padding: 9px 21px;
+  background-color: white;
+  border-radius: 0;
+  margin: 0 auto;
+  margin-top: 27px;
+}
+.email .bigform .semiform {
+  position: absolute;
+  right: 25%;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  z-index: 100;
+  -webkit-animation: rightside 1s ease-out 1s forwards;
+          animation: rightside 1s ease-out 1s forwards;
+}
+.email .bigform .semiform p {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.email .bigform .semiform p:nth-child(1) {
+  font-size: 32px;
+  margin-top: 20px;
+}
+.email .bigform .semiform p:nth-child(2) {
+  margin-top: 40px;
+}
+.email .bigform .semiform p:nth-child(3) {
+  margin-top: 320px;
+  font-size: 16px;
+}
+.email .bigform .semiform p i {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 43px;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 32px;
+}
+
+@-webkit-keyframes leftside {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes leftside {
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes rightside {
+  100% {
+    right: 0;
+  }
+}
+@keyframes rightside {
+  100% {
+    right: 0;
+  }
+}
+.contact-container {
+  background-image: url("https://images.unsplash.com/photo-1529720317453-c8da503f2051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: grid;
+  place-content: center;
+}/*# sourceMappingURL=contact.css.map */
