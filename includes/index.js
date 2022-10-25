@@ -24,7 +24,7 @@ window.addEventListener("scroll", function () {
     //     // myCarousel.style.opacity='1';
     //     // $('#header').slideDown()
     // }
-    if (value >= 1350) {
+    if (value >= 1300) {
         story.style.width = "1050px";
         story.style.opacity = "1";
     }
@@ -32,13 +32,13 @@ window.addEventListener("scroll", function () {
     //     story.style.width = "100%";
     //     story.style.opacity = "0";
     // }
-    if (value >= 900) {
+    if (value >= 700) {
         arrow.style.right = "0px";
     }
     else{
         arrow.style.right = "-50px";
     }
-    if (value >= 600) {
+    if (value >= 450) {
         trending.style.marginTop = "190px";
         trending.style.opacity = "1";
         console.log('fade')

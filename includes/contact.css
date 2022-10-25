@@ -18,8 +18,9 @@
   background-color: black;
   position: absolute;
   left: 25%;
-  -webkit-animation: leftside 1s ease-out 1s forwards;
-          animation: leftside 1s ease-out 1s forwards;
+  -webkit-animation: appear 1s ease-in-out 2s forwards, leftside 0.6s ease-in-out 3s forwards;
+          animation: appear 1s ease-in-out 2s forwards, leftside 0.6s ease-in-out 3s forwards;
+  opacity: 0;
 }
 .email .bigform .form .input,
 .email .bigform .form .textarea {
@@ -100,8 +101,9 @@
   height: 100%;
   background-color: white;
   z-index: 100;
-  -webkit-animation: rightside 1s ease-out 1s forwards;
-          animation: rightside 1s ease-out 1s forwards;
+  -webkit-animation: appear 0.5s ease-in-out 1s forwards, rightside 0.6s ease-in-out 3s forwards;
+          animation: appear 0.5s ease-in-out 1s forwards, rightside 0.6s ease-in-out 3s forwards;
+  opacity: 0;
 }
 .email .bigform .semiform p {
   width: 80%;
@@ -111,13 +113,22 @@
 .email .bigform .semiform p:nth-child(1) {
   font-size: 32px;
   margin-top: 20px;
+  -webkit-animation: appear 0.5s ease-in-out 1.5s forwards;
+          animation: appear 0.5s ease-in-out 1.5s forwards;
+  opacity: 0;
 }
 .email .bigform .semiform p:nth-child(2) {
   margin-top: 40px;
+  -webkit-animation: appear 0.5s ease-in-out 1.7s forwards;
+          animation: appear 0.5s ease-in-out 1.7s forwards;
+  opacity: 0;
 }
 .email .bigform .semiform p:nth-child(3) {
   margin-top: 320px;
   font-size: 16px;
+  -webkit-animation: appear 0.5s ease-in-out 2.2s forwards;
+          animation: appear 0.5s ease-in-out 2.2s forwards;
+  opacity: 0;
 }
 .email .bigform .semiform p i {
   background-color: rgb(0, 0, 0);
@@ -128,14 +139,27 @@
   text-align: center;
   margin-top: 15px;
   font-size: 32px;
+  -webkit-animation: appear 0.5s ease-in-out 2.5s forwards;
+          animation: appear 0.5s ease-in-out 2.5s forwards;
+  opacity: 0;
 }
 
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes leftside {
   100% {
     left: 0;
   }
 }
-
 @keyframes leftside {
   100% {
     left: 0;
