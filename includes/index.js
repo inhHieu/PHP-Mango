@@ -10,8 +10,8 @@ let trending = document.getElementById('trending');
 let story = document.getElementById('story');
 let stText = document.getElementById('stText');
 let capText = document.getElementById('capText');
-let myCarousel = document.getElementById('myCarousel');
-myCarousel.style.opacity='1';
+// let myCarousel = document.getElementById('myCarousel');
+// myCarousel.style.opacity='1';
 
 
 

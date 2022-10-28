@@ -7,26 +7,27 @@ include('includes/header.html');
   <!-- <div class="img-bg">
     <img src="https://images.unsplash.com/photo-1529720317453-c8da503f2051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
   </div> -->
+  <div class="noti"  id="noti">some text</div>
   <div class="email">
     <!-- <p id="title">Fell free to send me an email</p> -->
 
 
 
-    <div class="bigform ">
-      <div class="form">
+    <div class="bigform">
+      <div class="form" id="form">
         <div class="input">
-          <input type="text" required>
+          <input type="text" id="name" required>
           <span class="placeholder">Your name</span>
         </div>
         <div class="input">
-          <input type="text" required>
+          <input type="text" id="email" required>
           <span class="placeholder">Email</span>
         </div>
         <div class="textarea">
-          <textarea name="Message" id="textarea" required></textarea>
+          <textarea id="message" id="textarea" required></textarea>
           <span class="placeholder">Message</span>
         </div>
-        <input type="submit" class="button" value="Send">
+        <input type="button" class="button" onclick="sendEmail()" value="Send">
         </input>
       </div>
 
@@ -49,6 +50,7 @@ include('includes/header.html');
 
 
 <script src="includes/contact.js"></script>
+
 <?php
 include('includes/footer.html');
 ?>

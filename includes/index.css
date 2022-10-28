@@ -1,10 +1,10 @@
 
 
     /* index CSS */
-    #myCarousel{
+    /* #myCarousel{
         opacity: 0;
         transition: 1s;
-    }
+    } */
     #myCarousel .item {
         /* max-height: 790px; */
         height: 95vh;
