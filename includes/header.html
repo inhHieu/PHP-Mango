@@ -1,4 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php
+session_start();
+$currentUser = $_SESSION['currentUser'] ?? 'null';
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -6,6 +10,7 @@
 		<?php echo $page_title; ?>
 	</title>
 	<link rel="stylesheet" href="includes/main.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="includes/login.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="includes/index.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="includes/members.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="includes/quanly.css" type="text/css" media="screen" />
@@ -16,13 +21,17 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.12.1/datatables.min.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> -->
+
 </head>
 
 </head>
 
 <body onload="init()">
-	<div id="header-sm">
+	<!-- <div id="header-sm">
 		<span id="menu" style="font-size:30px;cursor:pointer" onclick="openside()">&#9776; </span>
 		<p id="logo-sm">Hang Rong</p>
 		<a id="dowload-sm" href="#">Dowload</a>
@@ -31,7 +40,7 @@
 		<a href="#">Tin Tuc</a> </li>
 		<a href="#">Cong Dong</a></li>
 		<a href="#">Huong Dan</a></li>
-	</div>
+	</div> -->
 	<header id="header">
 		<a id="logo" href="#">
 			<!-- <img src="img/logo.png" alt=""> -->
@@ -52,7 +61,7 @@
 				</ul> -->
 				</li>
 				<li>
-					<a href="quanly.php">Quản lý</a>
+					<a href="QL_sanpham.php">Quản lý</a>
 					<!-- <ul>
 					<li><a href="#">Update Later</a></li>
 					<li><a href="#">Update Later</a></li>
@@ -69,12 +78,13 @@
 					<li><a href="#">Update Later</a></li>
 				</ul> -->
 				</li>
-
-				<a id="dowload" href="#">Đăng nhập</a>
+				<!-- get ele by JS then check html dang nhap ? add class, make class signout : default -->
+				<a id="logbtn" class="download"  href="/PHP-Mango/logOut.php"><?php echo $_SESSION['currentUser'] ?? 'Đăng Nhập' ?></a>
 			</ul>
 		</div>
 
 	</header>
 	<div id="content">
+		
 		<!-- Start of the page-specific content. -->
 		<!-- Script 9.1 - header.html -->

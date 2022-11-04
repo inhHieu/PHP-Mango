@@ -1,0 +1,15 @@
+form{
+    background-color: rgb(180, 195, 122);
+    width: max-content;
+    padding: 10px;
+}
+input{
+    margin-bottom: 5px;
+    margin-right:20px;
+    display: inline-block;
+    width: 200px;
+}
+#submit{
+    display: block;
+    margin: 0 auto;
+}

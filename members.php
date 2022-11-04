@@ -39,43 +39,43 @@ include('includes/header.html');
                 <div class="works">
                     <ul>
                         <p class="tags" >Form</p>
-                        <li><a href="#0">Bai 1</a></li>
-                        <li><a href="#0">Bai 2</a></li>
-                        <li><a href="#0">Bai 3</a></li>
-                        <li><a href="#0">Bai 4</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Form/baitap/2/Bai1/2-1.php">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Form/baitap/2/Bai2/2-2.php">Bai 2</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Form/baitap/2/Bai3/2-3.php">Bai 3</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Form/baitap/2/Bai4/2-4.php">Bai 4</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:right ;" >Array &nbsp</p>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 2</a></li>
-                        <li><a href="#">Bai 3</a></li>
-                        <li><a href="#">Bai 4</a></li>
-                        <li><a href="#">Bai 5</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/bai1.php">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/bai2.php">Bai 2</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/Bai3/bai3.php">Bai 3</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/bai4.php">Bai 4</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/bai5.php">Bai 5</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:left ;" > & String</p>
-                        <li><a href="#">Bai 7</a></li>
-                        <li><a href="#">Bai 6</a></li>
-                        <li><a href="#">Bai 8</a></li>
-                        <li><a href="#">Bai 9</a></li>
-                        <li><a href="#">Bai 10</a></li>
-                        <li><a href="#">2D Array</a></li>
-                        <!-- <li><a href="#">Bai 1</a></li> -->
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/bai6.php">Bai 6</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/bai7.php">Bai 7</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/bai8.php">Bai 8</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/bai9.php">Bai 9</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/Baitap/bai10.php">Bai 10</a></li>
+                        <li><a target="_blank" href="BT_Hieu/Array/2D-Array.php">2D Array</a></li>
+                        <!-- <li><a target="_blank" href="#">Bai 1</a></li> -->
                     </ul>
                     <ul>
                         <p class="tags" >OOP</p>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 2</a></li>
-                        <li><a href="#">Bai 3</a></li> 
+                        <li><a target="_blank" href="BT_Hieu/OOP/sinhvien.php">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Hieu/OOP/nhanvien.php">Bai 2</a></li>
+                        <li><a target="_blank" href="BT_Hieu/OOP/phanso.php">Bai 3</a></li> 
                     </ul>
                     <ul>
                         <p class="tags" >Database</p>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Hieu/DB-Ex/phantrang2.php">Paging</a></li>
+                        <li><a target="_blank" href="BT_Hieu/DB-Ex/update/list.php">Update</a></li>
+                        <li><a target="_blank" href="BT_Hieu/DB-Ex/xoa-sua/thongtinKH.php">Del-Edit</a></li>
+                        <li><a target="_blank" href="BT_Hieu/DB-Ex/them/themMoi.php">Add</a></li>
+                        <li><a target="_blank" href="BT_Hieu/DB-Ex/timkiem/timkim2.php">Search</a></li>
+                        <!-- <li><a target="_blank" href="#">Bai 1</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -95,43 +95,43 @@ include('includes/header.html');
                 <div class="works">
                     <ul>
                         <p class="tags" >Form</p>
-                        <li><a href="#1">Bai 1</a></li>
-                        <li><a href="#1">Bai 2</a></li>
-                        <li><a href="#1">Bai 3</a></li>
-                        <li><a href="#1">Bai 4</a></li>
+                        <li><a target="_blank" href="#1">Bai 1</a></li>
+                        <li><a target="_blank" href="#1">Bai 2</a></li>
+                        <li><a target="_blank" href="#1">Bai 3</a></li>
+                        <li><a target="_blank" href="#1">Bai 4</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:right ;" >Array &nbsp</p>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 2</a></li>
-                        <li><a href="#">Bai 3</a></li>
-                        <li><a href="#">Bai 4</a></li>
-                        <li><a href="#">Bai 5</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 2</a></li>
+                        <li><a target="_blank" href="#">Bai 3</a></li>
+                        <li><a target="_blank" href="#">Bai 4</a></li>
+                        <li><a target="_blank" href="#">Bai 5</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:left ;" > & String</p>
-                        <li><a href="#">Bai 7</a></li>
-                        <li><a href="#">Bai 6</a></li>
-                        <li><a href="#">Bai 8</a></li>
-                        <li><a href="#">Bai 9</a></li>
-                        <li><a href="#">Bai 10</a></li>
-                        <li><a href="#">2D Array</a></li>
-                        <!-- <li><a href="#">Bai 1</a></li> -->
+                        <li><a target="_blank" href="#">Bai 7</a></li>
+                        <li><a target="_blank" href="#">Bai 6</a></li>
+                        <li><a target="_blank" href="#">Bai 8</a></li>
+                        <li><a target="_blank" href="#">Bai 9</a></li>
+                        <li><a target="_blank" href="#">Bai 10</a></li>
+                        <li><a target="_blank" href="#">2D Array</a></li>
+                        <!-- <li><a target="_blank" href="#">Bai 1</a></li> -->
                     </ul>
                     <ul>
                         <p class="tags" >OOP</p>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 2</a></li>
-                        <li><a href="#">Bai 3</a></li> 
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 2</a></li>
+                        <li><a target="_blank" href="#">Bai 3</a></li> 
                     </ul>
                     <ul>
                         <p class="tags" >Database</p>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,53 +151,53 @@ include('includes/header.html');
                 <div class="works">
                     <ul>
                         <p class="tags" >Form</p>
-                        <li><a href="#2">Bai 1</a></li>
-                        <li><a href="#2">Bai 2</a></li>
-                        <li><a href="#2">Bai 3</a></li>
-                        <li><a href="#2">Bai 4</a></li>
+                        <li><a target="_blank" href="#2">Bai 1</a></li>
+                        <li><a target="_blank" href="#2">Bai 2</a></li>
+                        <li><a target="_blank" href="#2">Bai 3</a></li>
+                        <li><a target="_blank" href="#2">Bai 4</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:right ;" >Array &nbsp</p>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 2</a></li>
-                        <li><a href="#">Bai 3</a></li>
-                        <li><a href="#">Bai 4</a></li>
-                        <li><a href="#">Bai 5</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 2</a></li>
+                        <li><a target="_blank" href="#">Bai 3</a></li>
+                        <li><a target="_blank" href="#">Bai 4</a></li>
+                        <li><a target="_blank" href="#">Bai 5</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:left ;" > & String</p>
-                        <li><a href="#">Bai 7</a></li>
-                        <li><a href="#">Bai 6</a></li>
-                        <li><a href="#">Bai 8</a></li>
-                        <li><a href="#">Bai 9</a></li>
-                        <li><a href="#">Bai 10</a></li>
-                        <li><a href="#">2D Array</a></li>
-                        <!-- <li><a href="#">Bai 1</a></li> -->
+                        <li><a target="_blank" href="#">Bai 7</a></li>
+                        <li><a target="_blank" href="#">Bai 6</a></li>
+                        <li><a target="_blank" href="#">Bai 8</a></li>
+                        <li><a target="_blank" href="#">Bai 9</a></li>
+                        <li><a target="_blank" href="#">Bai 10</a></li>
+                        <li><a target="_blank" href="#">2D Array</a></li>
+                        <!-- <li><a target="_blank" href="#">Bai 1</a></li> -->
                     </ul>
                     <ul>
                         <p class="tags" >OOP</p>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 2</a></li>
-                        <li><a href="#">Bai 3</a></li> 
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 2</a></li>
+                        <li><a target="_blank" href="#">Bai 3</a></li> 
                     </ul>
                     <ul>
                         <p class="tags" >Database</p>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
-                        <li><a href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="#mbCarousel" data-slide="prev">
+        <a target="_blank" class="left carousel-control" href="#mbCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#mbCarousel" data-slide="next">
+        <a target="_blank" class="right carousel-control" href="#mbCarousel" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
         </a>

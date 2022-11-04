@@ -41,24 +41,24 @@ window.addEventListener("scroll", function () {
     if (value >= 450) {
         trending.style.marginTop = "190px";
         trending.style.opacity = "1";
-        console.log('fade')
+        // console.log('fade')
     }
     else{
         arrow.style.right = "-50px";
     }
     if (value >= 400) {
         header.style.background = "black";
-        headersm.style.background = "black";
-        menu.style.color = "white";
-        logosm.style.color = "white";
+        // headersm.style.background = "black";
+        // menu.style.color = "white";
+        // logosm.style.color = "white";
         logo.style.color = "white";
         for (i = 0; i <= t.length; i++)      t[i].style.color = "white";
     }
     else {
         header.style.background = "white";
-        headersm.style.background = "white";
-        menu.style.color = "black";
-        logosm.style.color = "black";
+        // headersm.style.background = "white";
+        // menu.style.color = "black";
+        // logosm.style.color = "black";
         logo.style.color = "black";
         for (i = 0; i <= t.length; i++)      t[i].style.color = "black";
     }

@@ -1,0 +1,144 @@
+.quanly-container {
+    display: flex;
+    width: 100%;
+    // height: max-content;
+}
+.left-panel {
+    display: block;
+    height: 95vh;
+    width: 200px;
+    min-width: 200px;
+    border: solid thin bla;
+    position: sticky;
+    top: 50px;
+    transform-origin: bottom;
+    display: grid;
+    align-content: center;
+    div {
+        width: 100%;
+        height: 50px;
+        a {
+            line-height: 50px;
+            display: block;
+            text-decoration: none;
+            color: black;
+            width: 100%;
+            height: 100%;
+            padding-left: 10%;
+        }
+        &:hover {
+            a {
+                color: white;
+            }
+            background-color: black;
+        }
+    }
+}
+.right-content {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    font-family: 'Roboto', sans-serif !important; //ITS MOT WORKING??????????????????
+    .filter-wrapper {
+        display: flex;
+        width: 1000px;
+        justify-content: center;
+        justify-content: space-evenly;
+        padding-bottom: 1em;
+        .filter {
+            border: thin solid black;
+            border-radius: 1em;
+            padding: 0 1em;
+            height: 3em;
+            line-height: 3em;
+            select{                
+                    border: none;
+                    outline: none;                
+            }
+        }
+        .add{
+            background-color: #fff200;
+            border: none;
+            padding: 0 2em;
+            text-decoration: none;
+            color: black;
+        }
+        .search-wrapper{
+            overflow-y: hidden;
+            .search{
+                border: none;
+                outline: none;
+                // background: none;
+            }
+            button{
+                border: none;
+                background: none;
+            }
+        }
+    }
+    form {
+        height: 100%;
+        table {
+            max-width: 1000px; //
+            img {
+                max-width: 100px;
+            }
+
+            tbody {
+                tr {
+                    input{
+                        background: transparent;
+                    }
+                    .deactive{
+                        border:none;
+                    }
+                    .active-inpt{
+                        border: thin solid black !important;
+                    }
+                    &:nth-child(even) {
+                        display: none;
+                    }
+                    .xoa{
+                        cursor: pointer;
+                    }
+                    td {
+                        vertical-align: middle;
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.center {
+    margin: 0 auto;
+    min-height: 95vh;
+    height: 100%;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+        width: 100%;
+        height: min-content;
+        table {
+            width: 1000%;
+            textarea {
+                width: 100%;
+                height: 100px;
+                resize: none;
+            }
+        }
+    }
+    .SP-img {
+        width: 500px;
+        height: min-content;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

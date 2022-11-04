@@ -1,1 +1,145 @@
-/*# sourceMappingURL=quanly.css.map */
+.quanly-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-panel {
+  display: block;
+  height: 95vh;
+  width: 200px;
+  min-width: 200px;
+  border: solid thin bla;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  transform-origin: bottom;
+  display: grid;
+  align-content: center;
+}
+.left-panel div {
+  width: 100%;
+  height: 50px;
+}
+.left-panel div a {
+  line-height: 50px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+  padding-left: 10%;
+}
+.left-panel div:hover {
+  background-color: black;
+}
+.left-panel div:hover a {
+  color: white;
+}
+
+.right-content {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  font-family: "Roboto", sans-serif !important;
+}
+.right-content .filter-wrapper {
+  display: flex;
+  width: 1000px;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding-bottom: 1em;
+}
+.right-content .filter-wrapper .filter {
+  border: thin solid black;
+  border-radius: 1em;
+  padding: 0 1em;
+  height: 3em;
+  line-height: 3em;
+}
+.right-content .filter-wrapper .filter select {
+  border: none;
+  outline: none;
+}
+.right-content .filter-wrapper .add {
+  background-color: #fff200;
+  border: none;
+  padding: 0 2em;
+  text-decoration: none;
+  color: black;
+}
+.right-content .filter-wrapper .search-wrapper {
+  overflow-y: hidden;
+}
+.right-content .filter-wrapper .search-wrapper .search {
+  border: none;
+  outline: none;
+}
+.right-content .filter-wrapper .search-wrapper button {
+  border: none;
+  background: none;
+}
+.right-content form {
+  height: 100%;
+}
+.right-content form table {
+  max-width: 1000px;
+}
+.right-content form table img {
+  max-width: 100px;
+}
+.right-content form table tbody tr input {
+  background: transparent;
+}
+.right-content form table tbody tr .deactive {
+  border: none;
+}
+.right-content form table tbody tr .active-inpt {
+  border: thin solid black !important;
+}
+.right-content form table tbody tr:nth-child(even) {
+  display: none;
+}
+.right-content form table tbody tr .xoa {
+  cursor: pointer;
+}
+.right-content form table tbody tr td {
+  vertical-align: middle;
+}
+.right-content form table tbody tr td input {
+  width: 100%;
+}
+
+.center {
+  margin: 0 auto;
+  min-height: 95vh;
+  height: 100%;
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center form {
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+.center form table {
+  width: 1000%;
+}
+.center form table textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+.center .SP-img {
+  width: 500px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+.center .SP-img img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=quanly.css.map */

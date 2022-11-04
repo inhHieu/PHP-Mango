@@ -1,0 +1,101 @@
+.modal-login {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+  display: grid;
+  place-content: center;
+}
+.modal-login .login {
+  background-color: white;
+  width: 600px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  position: relative;
+}
+.modal-login .login .switch-opt {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+}
+.modal-login .login .switch-opt .atv {
+  color: black;
+  background-color: white;
+  cursor: default;
+}
+.modal-login .login .switch-opt div {
+  background-color: rgb(0, 0, 0);
+  width: 50%;
+  display: grid;
+  place-content: center;
+  color: white;
+}
+.modal-login .login .switch-opt div p {
+  margin: 0;
+}
+.modal-login .login .login-form {
+  width: 380px;
+  height: 160px;
+}
+.modal-login .login .login-form .userName {
+  margin-top: 20px !important;
+}
+.modal-login .login .login-form .input {
+  margin: 10px 0 10px 0;
+}
+.modal-login .login .login-form .input label {
+  width: 11rem;
+  font-weight: 300;
+}
+.modal-login .login .login-form .input input {
+  width: 265px;
+}
+.modal-login .login .login-form .input ::-moz-placeholder {
+  font-size: 0.7em;
+}
+.modal-login .login .login-form .input :-ms-input-placeholder {
+  font-size: 0.7em;
+}
+.modal-login .login .login-form .input ::placeholder {
+  font-size: 0.7em;
+}
+.modal-login .login .login-form .login-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-login .login .login-form .login-btn p {
+  color: red;
+  line-height: 45px;
+  margin: 0;
+}
+.modal-login .login .login-form .login-btn input {
+  background-color: #fff200;
+  border: none;
+  width: 100px;
+  padding: 10px 20px;
+}
+.modal-login .login .relative {
+  width: 100%;
+  text-align: center;
+}
+.modal-login .login .relative p {
+  font-size: 14px;
+}
+.modal-login .login .relative .opt-grp {
+  font-size: 24px;
+}
+.modal-login .login .relative .opt-grp i {
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  color: white;
+  background-color: #000000;
+  cursor: pointer;
+}/*# sourceMappingURL=login.css.map */

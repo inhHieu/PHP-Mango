@@ -78,6 +78,15 @@ function SmoothScroll(target, speed, smooth) {
 
 
 
+var loginbtn = document.getElementById('logbtn');
+console.log(loginbtn.textContent);
+if (loginbtn.textContent !== "Đăng Nhập") {
+	loginbtn.className='loged-in';
+	// loginbtn.attributes
+}
+
+
+
 //members-------------------------
 
 

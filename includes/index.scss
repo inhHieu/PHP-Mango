@@ -1,0 +1,102 @@
+
+
+    /* index CSS */
+    /* #myCarousel{
+        opacity: 0;
+        transition: 1s;
+    } */
+    #myCarousel .item {
+        /* max-height: 790px; */
+        height: 95vh;
+      }
+    .item img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        /* height: 40rem; */
+        margin: 0 auto;
+    }
+    
+    
+    
+    .trending{
+        background-color: #000;
+        /* width: 100%; */
+        overflow-x: hidden;
+        height: 480px;
+        display: flex;
+        align-items: center;
+        margin-top: 390px;
+        opacity: 0;
+        transition: .8s;
+        margin-bottom: 200px;
+    }
+    #arrow{
+        position: absolute;
+        color: rgb(0, 0, 0);
+        font-size: 32px;
+        right: -50px;
+        width: 50px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        transition: .5s;
+    }
+    .text{
+        color: white;
+        letter-spacing: 10px;
+        font-size: 32px;
+        font-weight: 400;
+        transform: rotate(-90deg);
+        margin-left: -46px;
+    }
+    .h-scroll{    
+        display: flex;
+        margin-left: 5px;
+        /* overflow-x: auto; */
+        /* width: max-content; */
+        /* align-items: center; */
+    
+    }
+    .item-ct{
+        width: 266px;
+        height: 380px;
+        background-color: #0093E9;
+        margin-right: 106px;
+    }
+    .item-ct img{
+        width: 266px;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .story{
+        margin: 0 auto;
+        width: 100%;
+        height: 780px;
+        display: flex;
+        justify-content: space-between;
+        transition: .8s;
+        opacity: 0;
+        margin-bottom: 100px;
+    }
+    .stText{
+        width: 462px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .capText{
+        font-size: 64px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+    .stImg{
+        width: 524px;
+    }
+    .stImg img{
+        width: 100%;
+    }

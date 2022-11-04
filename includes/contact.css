@@ -93,6 +93,11 @@
   border-radius: 0;
   margin: 0 auto;
   margin-top: 27px;
+  font-weight: 300;
+  transition: 0.5s;
+}
+.email .bigform .form .button:hover {
+  background-color: #fff200;
 }
 .email .bigform .semiform {
   position: absolute;
