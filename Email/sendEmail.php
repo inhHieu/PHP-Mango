@@ -20,7 +20,7 @@ $mail->SMTPAuth   = true; //Xác thực SMTP
 //Cấu hình bắt đầu phần gửi mail
 $mFrom = "hieu.nm.61cntt@ntu.edu.vn"; // Địa chỉ email của người gửi -----(Mac dinh)
 $nFrom = $_POST['name']; //mail được từ đâu, thường để tên cơ quan/công ty ---------------(Ten khach hang)
-$mPass = "ditmechamphay"; //mật khẩu email của người gửi------------------(Mac dinh)
+$mPass = "Hieu31();"; //mật khẩu email của người gửi------------------(Mac dinh)
 $mTo = "kuti.hieu01@gmail.com"; //địa chỉ email của người nhận------------(Mac dinh)
 $nTo = "Mango Suport"; //tên người nhận-----------------------------------(Mac dinh)
 $body = $_POST['message'];//nội dung thư, định dạng HTML----------------------------------(Noi dung mail)

@@ -51,7 +51,7 @@
 }
 .right-content .filter-wrapper .filter {
   border: thin solid black;
-  border-radius: 1em;
+  border-radius: 7px;
   padding: 0 1em;
   height: 3em;
   line-height: 3em;
@@ -83,27 +83,56 @@
 }
 .right-content form table {
   max-width: 1000px;
+  border-collapse: separate;
 }
 .right-content form table img {
   max-width: 100px;
 }
+.right-content form table thead tr th {
+  border-bottom: none;
+  border-bottom-width: none;
+  border-bottom-style: none;
+  border-bottom-color: none;
+}
 .right-content form table tbody tr input {
   background: transparent;
 }
-.right-content form table tbody tr .deactive {
+.right-content form table tbody tr .inpt {
   border: none;
+  padding: 0.5em;
 }
 .right-content form table tbody tr .active-inpt {
-  border: thin solid black !important;
+  background-color: #000000;
+  border-radius: 7px;
+  color: white;
 }
-.right-content form table tbody tr:nth-child(even) {
+.right-content form table tbody tr .id {
   display: none;
 }
-.right-content form table tbody tr .xoa {
+.right-content form table tbody tr .update,
+.right-content form table tbody tr .confirm,
+.right-content form table tbody tr .delete {
   cursor: pointer;
 }
+.right-content form table tbody tr .confirm {
+  visibility: hidden;
+  background: none;
+}
+.right-content form table tbody tr .visible {
+  visibility: visible;
+}
 .right-content form table tbody tr td {
+  border-top: 1px solid #ddd;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(221, 221, 221);
   vertical-align: middle;
+}
+.right-content form table tbody tr td:nth-last-child(-n+4) {
+  border-top: none;
+  border-top-width: none;
+  border-top-style: none;
+  border-top-color: none;
 }
 .right-content form table tbody tr td input {
   width: 100%;
@@ -126,12 +155,27 @@
   height: min-content;
 }
 .center form table {
-  width: 1000%;
+  max-width: 1000px;
+}
+.center form table thead tr th {
+  border-bottom: none;
+  border-bottom-width: none;
+  border-bottom-style: none;
+  border-bottom-color: none;
+}
+.center form table tbody tr td {
+  border-top: none;
+  border-top-width: none;
+  border-top-style: none;
+  border-top-color: none;
 }
 .center form table textarea {
   width: 100%;
   height: 100px;
   resize: none;
+}
+.center form table input {
+  width: 100px;
 }
 .center .SP-img {
   width: 500px;

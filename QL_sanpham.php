@@ -2,7 +2,6 @@
 $page_title = 'Welcome to this Site!';
 include('includes/header.html');
 include('controller.php');
-
 ?>
 
 <?php
@@ -68,6 +67,8 @@ connectDB()->close();
 <div class="quanly-container">
     <?php include('quanly/left-control.php') ?>
 
+    <div class="noti" id="noti">some text</div>
+
     <div class="right-content">
         <form action="QL_sanpham.php" method="GET" id="myForm">
             <table id="table" class='table '>
@@ -117,44 +118,49 @@ connectDB()->close();
                         while ($rows = mysqli_fetch_row($result)) {
                             // $stt % 2 == 0 ? $color = '#ccd5ae' : $color = '#d4a373';
                             // '<img src="Hinh_sua/'.$rows[4].'" alt="">'
-
-                            echo "<tr>";
-
-
-                            echo "<td>" .
-                                '<img src="' . $rows[1] . '" alt="">'
-                                . "</td>";
-                            // echo "<td>$rows[0]</td>";
-                            echo "<td class='input'> 
-                                <input type='text' class='deactive' name='' value='$rows[0]' disabled>
-                                </td>";
-                            echo "<td class='input'>
-                                <input type='text' class='deactive' name='' value='$rows[4]' disabled>
-                                </td>";
-                            echo "<td class='input'>
-                                <input type='text' class='deactive' name='' value='$rows[5]' disabled>
-                                </td>";
-                            // echo "<td>$rows[6]</td>";
-                            echo "<td class='input'> 
-                                <input type='text' class='deactive' name='' value='$rows[2]' disabled>
-                                </td>";
-                            echo "<td><a href='Edit_sanpham.php?ID=" . $rows[3] . "'>Sua</a></td>";
-                            echo "<td class='xoa' onclick='edit()'>xoa</td>";
-                            echo "</tr>";
-
-                            echo "<tr>";
-                            echo "<td>" .
-                                '<img src="" alt="">'
-                                . "</td>";
-                            echo "<td><input name'tenSua' value=''></td>";
-                            echo "<td><input name'LoaiSP' value=''></td>";
-                            echo "<td><input name'trongLuong' value=''></td>";
-                            echo "<td><input name'donGia' value=''></td>";
-                            echo "<td><input name'hangSua' value=''></td>";
-
-                            echo "</tr>";
-
-                            $stt += 1;
+                    ?>
+                            <tr>
+                                <td class="id" id="Ma_SP">
+                                    <input type='text' name='Ma_SP' value='<?= $rows[3] ?>'>
+                                </td>
+                                <td>
+                                    <img src="<?= $rows[1] ?>" alt="">
+                                </td>
+                                <td class='input' id="tenSP">
+                                    <input type='text' class='inpt' name='tenSP' value='<?= $rows[0] ?>' disabled>
+                                </td>
+                                <td class='input' id="loaiSP">
+                                    <input type='text' class='inpt' name='loaiSP' value='<?= $rows[5] ?>' disabled>
+                                </td>
+                                <td class='input' id="hangSX">
+                                    <input type='text' class='inpt' name='hangSX' value='<?= $rows[4] ?>' disabled>
+                                </td>
+                                <!-- <td>$rows[6]</td> -->
+                                <td class='input' id="donGia">
+                                    <input type='text' class='inpt' name='donGia' value='<?= $rows[2] ?>' disabled>
+                                </td>
+                                <td class="confirm">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </td>
+                                <td class='update'>
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                </td>
+                                <td class="delete">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </td>
+                                <td><a href='Edit_sanpham.php?ID=<?= $rows[3] ?>'>Edit</a></td>
+                            </tr>
+                            <!-- <tr>
+                                <td>
+                                    <img src="" alt="">
+                                </td>
+                                <td><input name='tenSua' value=''></td>
+                                <td><input name='LoaiSP' value=''></td>
+                                <td><input name='trongLuong' value=''></td>
+                                <td><input name='donGia' value=''></td>
+                                <td><input name='hangSua' value=''></td>
+                            </tr> -->
+                    <?php
                         }
                     }
                     ?>
@@ -162,7 +168,7 @@ connectDB()->close();
                 <?php
                 if ($number_of_result != 0) {
                     if (isset($search)) {
-                        echo '<tr> <td colspan="7" align="center"  >';
+                        echo '<tr> <td colspan="9" align="center"  >';
                         //page link
                         echo '<div class="redirect" style="margin: 0 auto">';
                         //redirect to first
@@ -187,7 +193,7 @@ connectDB()->close();
                         echo '</div>';
                         echo '</td></tr>';
                     } else {
-                        echo '<tr> <td colspan="7" align="center" >';
+                        echo '<tr> <td colspan="9" align="center" >';
                         //page link
                         echo '<div class="redirect" style="margin: 0 auto">';
                         //redirect to first
@@ -225,6 +231,114 @@ connectDB()->close();
 
 
 <script src="includes/quanly.js"></script>
+<script>
+
+
+$(".delete").click(function () {
+  var Ma_SP = $(this).siblings(".id#Ma_SP").children().val();
+  var tenSP = $(this).siblings(".input#tenSP").children().val();
+  console.log(Ma_SP);
+  $.confirm({
+    title: "Delete " + tenSP,
+    content: "This action cannot be undo!!!",
+    type: "red",
+    backgroundDismiss: true,
+    escapeKey: true,
+    typeAnimated: false,
+    bgOpacity:.5,
+    buttons: {
+      confirm: {
+        text: "Delete",
+        btnClass: "btn-red",
+        action: function () {
+          $.ajax({
+            url: "quanly/Delete.php",
+            method: "POST",
+            dataType: "json",
+            data: {
+              Ma_SP: Ma_SP,
+            },
+            error: function (response) {
+              console.log(response);
+              console.log("fail");
+              $("#noti").text("Delete failed");
+              $("#noti").css("background-color", "#ff0000");
+              $("#noti").css("color", "white");
+              $("#noti")
+                .animate({ top: "90vh" })
+                .delay(3000)
+                .animate({ top: "105vh" });
+            },
+            success: function (response) {
+              console.log(response);
+              console.log("success");
+              $("#noti").text("Delete success");
+              $("#noti").css("background-color", "#39FF14");
+              $("#noti")
+                .animate({ top: "90vh" })
+                .delay(3000)
+                .animate({ top: "105vh" });
+              setTimeout(reload, 3000);
+            },
+          });
+        },
+      },
+      cancel: function () {},
+    },
+  });
+  //
+});
+
+function reload() {
+  location.reload(true);
+}
+
+$(".confirm").click(function () {
+  var myConfirm = $(this);
+  var Ma_SP = $(this).siblings(".id#Ma_SP").children().val();
+  var tenSP = $(this).siblings(".input#tenSP").children().val();
+  var loaiSP = $(this).siblings(".input#loaiSP").children().val();
+  var hangSX = $(this).siblings(".input#hangSX").children().val();
+  var donGia = $(this).siblings(".input#donGia").children().val();
+  console.log(hangSX);
+
+  $.ajax({
+    url: "quanly/Update.php",
+    method: "POST",
+    dataType: "json",
+    data: {
+      Ma_SP: Ma_SP,
+      tenSP: tenSP,
+      loaiSP: loaiSP,
+      hangSX: hangSX,
+      donGia: donGia,
+    },
+    error: function (response) {
+      console.log(response);
+      console.log("fail");
+      $("#noti").text("Edit fail");
+      $("#noti").css("background-color", "#ff0000");
+      $("#noti").css("color", "white");
+      $("#noti").animate({ top: "90vh" }).delay(3000).animate({ top: "105vh" });
+    },
+    success: function (response) {
+      console.log(response);
+      console.log("success");
+      $(myConfirm).siblings(".input").children().toggleClass("active-inpt");
+      $(myConfirm)
+        .siblings(".input")
+        .children()
+        .prop("disabled", (i, v) => !v);
+      $(myConfirm).toggleClass("visible");
+      $(".update").html('<i class="fa fa-pencil" aria-hidden="true"></i>');
+      $("#noti").text("Edit success");
+      $("#noti").css("background-color", "#39FF14");
+      $("#noti").animate({ top: "90vh" }).delay(3000).animate({ top: "105vh" });
+    },
+  });
+});
+
+</script>
 <?php
 include('includes/footer.html');
 ?>

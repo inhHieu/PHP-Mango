@@ -1,7 +1,7 @@
 <?php
-
+// Ket noi CSDL
 function connectDB()
-{ // Ket noi CSDL
+{ 
     $conn = mysqli_connect('localhost', 'root', '', 'mango');
     if ($conn->connect_error) {
         die('Could not connect to MySQL: ' . mysqli_connect_error());

@@ -70,8 +70,8 @@ include('includes/header.html');
                     </ul>
                     <ul>
                         <p class="tags" >Database</p>
-                        <li><a target="_blank" href="BT_Hieu/DB-Ex/phantrang2.php">Paging</a></li>
-                        <li><a target="_blank" href="BT_Hieu/DB-Ex/update/list.php">Update</a></li>
+                        <li><a target="_blank" href="BT_Hieu/DB-Ex/phantrang2.php">Pagination</a></li>
+                        <li><a target="_blank" href="BT_Hieu/DB-Ex/update/list.php">Link</a></li>
                         <li><a target="_blank" href="BT_Hieu/DB-Ex/xoa-sua/thongtinKH.php">Del-Edit</a></li>
                         <li><a target="_blank" href="BT_Hieu/DB-Ex/them/themMoi.php">Add</a></li>
                         <li><a target="_blank" href="BT_Hieu/DB-Ex/timkiem/timkim2.php">Search</a></li>
@@ -95,38 +95,38 @@ include('includes/header.html');
                 <div class="works">
                     <ul>
                         <p class="tags" >Form</p>
-                        <li><a target="_blank" href="#1">Bai 1</a></li>
-                        <li><a target="_blank" href="#1">Bai 2</a></li>
-                        <li><a target="_blank" href="#1">Bai 3</a></li>
-                        <li><a target="_blank" href="#1">Bai 4</a></li>
+                        <li><a target="_blank" href="BT_Tai/Form/baitaptonghop/bai1.php">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Tai/Form/baitaptonghop/bai2.php">Bai 2</a></li>
+                        <li><a target="_blank" href="BT_Tai/Form/baitaptonghop/bai3.php">Bai 3</a></li>
+                        <li><a target="_blank" href="BT_Tai/Form/baitaptonghop/bai4.php">Bai 4</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:right ;" >Array &nbsp</p>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 2</a></li>
-                        <li><a target="_blank" href="#">Bai 3</a></li>
-                        <li><a target="_blank" href="#">Bai 4</a></li>
-                        <li><a target="_blank" href="#">Bai 5</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/bai1.php">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/bai2.php">Bai 2</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/Bai3/bai3.php">Bai 3</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/bai4.php">Bai 4</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/bai5.php">Bai 5</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:left ;" > & String</p>
-                        <li><a target="_blank" href="#">Bai 7</a></li>
-                        <li><a target="_blank" href="#">Bai 6</a></li>
-                        <li><a target="_blank" href="#">Bai 8</a></li>
-                        <li><a target="_blank" href="#">Bai 9</a></li>
-                        <li><a target="_blank" href="#">Bai 10</a></li>
-                        <li><a target="_blank" href="#">2D Array</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/bai6.php">Bai 6</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/bai7.php">Bai 7</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/bai8.php">Bai 8</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/bai9.php">Bai 9</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/Baitap/bai10.php">Bai 10</a></li>
+                        <li><a target="_blank" href="BT_Tai/Array/2D-Array.php">2D Array</a></li>
                         <!-- <li><a target="_blank" href="#">Bai 1</a></li> -->
                     </ul>
                     <ul>
                         <p class="tags" >OOP</p>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 2</a></li>
-                        <li><a target="_blank" href="#">Bai 3</a></li> 
+                        <li><a target="_blank" href="BT_Tai/OOP/bai1.php">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Tai/OOP/bai2.php">Bai 2</a></li>
+                        <!-- <li><a target="_blank" href="#">Bai 3</a></li>  -->
                     </ul>
                     <ul>
                         <p class="tags" >Database</p>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Tai/PHPMyAdmin/phantrang.php">Pagination</a></li>
                         <li><a target="_blank" href="#">Bai 1</a></li>
                         <li><a target="_blank" href="#">Bai 1</a></li>
                         <li><a target="_blank" href="#">Bai 1</a></li>

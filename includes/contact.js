@@ -16,7 +16,7 @@ function sendEmail() {
       success: function (response) {
         console.log(response)
         $("#noti").text("send okkk");
-        $("#noti").css("background-color", "#fff200");
+        $("#noti").css("background-color", "#39FF14");
         $("#noti").animate({top: '90vh'}).delay(3000).animate({top: '105vh'});
       },
       error: function (response) {
