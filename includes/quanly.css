@@ -174,8 +174,22 @@
   height: 100px;
   resize: none;
 }
-.center form table input {
-  width: 100px;
+.center form table input, .center form table select, .center form table textarea {
+  border-radius: 7px;
+  border: thin solid black;
+  outline: none;
+  padding: 0.5em;
+}
+.center form table .submit {
+  background-color: black;
+  color: white;
+  margin: 0 0 10px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 0.5em 1em;
+  border-radius: 7px;
+  cursor: pointer;
 }
 .center .SP-img {
   width: 500px;

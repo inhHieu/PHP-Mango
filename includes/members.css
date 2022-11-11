@@ -115,10 +115,6 @@
   color: white;
 }
 .mbContainer #i4cDan,
-.mbContainer #i4cTai {
-  opacity: 0;
-}
-.mbContainer #i4cDan,
 .mbContainer #i4cTai,
 .mbContainer #i4cHieu {
   transition: 1.3s ease;

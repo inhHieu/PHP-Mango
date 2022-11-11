@@ -202,7 +202,7 @@ body{
             overflow: hidden;
             cursor: pointer;
             transition-duration: 0.5s !important;
-            transition-delay: 2s !important;
+            /* transition-delay: 2s !important; */
         }
         .loged-in:hover::after{
             height: 50px;

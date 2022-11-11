@@ -162,6 +162,7 @@
         width: 100%;
         height: min-content;
         table {
+            
             max-width: 1000px;
             thead {
                 tr {
@@ -188,8 +189,20 @@
                 height: 100px;
                 resize: none;
             }
-            input {
-                width: 100px;
+            input,select,textarea {
+                border-radius: 7px;
+                border: thin solid black;
+                 outline: none;
+                 padding: .5em;
+            }
+            .submit{
+                background-color: black;
+                color: white;
+                margin: 0 0 10px;
+                width: min-content;
+                padding: 0.5em 1em;
+                border-radius: 7px;
+                cursor: pointer;
             }
         }
     }

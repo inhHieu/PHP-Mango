@@ -84,7 +84,7 @@ $conn->close();
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
-                    <a href="ADD_sanpham.php" class="add filter">Thêm mới</a>
+                    <a href="ADD_khachhang.php" class="add filter">Thêm mới</a>
                     <p><?= @$noti ?></p>
                 </div>
 

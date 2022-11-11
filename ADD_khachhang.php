@@ -9,13 +9,10 @@ include('includes/header.html');
 $conn = mysqli_connect('localhost', 'root', '', 'mango')
     or die('Could not connect to MySQL: ' . mysqli_connect_error());
 
-//get Loai
-$sql_Loai = 'SELECT Ma_Loai, Ten_Loai FROM loai_sp;';
-$result_Loai = mysqli_query($conn, $sql_Loai);
+//get CV
+$sql_CV = 'SELECT Ma_CV, Ten_CV FROM chuc_vu;';
+$result_CV = mysqli_query($conn, $sql_CV);
 
-//get HSX
-$sql_HSX = 'SELECT Ma_HSX, Ten_HSX FROM hang_sx;';
-$result_HSX = mysqli_query($conn, $sql_HSX);
 $conn->close();
 ?>
 
@@ -24,91 +21,95 @@ $conn->close();
     <div class="noti" id="noti">some text</div>
 
     <div class="center">
-        <form action="ADD_sanpham.php" method="post" id="myForm" enctype='multipart/form-data'>
+        <form action="ADD_khachhnag.php" method="post" id="myForm" enctype='multipart/form-data'>
             <!-- <p id="noti"><?= @$noti ?></p> -->
             <table class="table">
                 <tr>
-                    <th colspan="4">Thêm sản phẩm mới</th>
+                    <th >Thêm Khách hàng mới</th>
                 </tr>
                 <tr>
-                    <td>Mã SP: </td>
-                    <td><input type="text" id="Ma_SP" name="Ma_SP"></td>
-                    <td>Tên SP: </td>
-                    <td><input type="text" id="Ten_SP" name="Ten_SP"></td>
-                </tr>
-                <tr>
-                    <td>Hãng Sản Xuất: </td>
+                    <td>Mã KH: </td>
+                    <td><input type="text" id="Ma_KH" name="Ma_KH"></td>
+                    <td>Chức vụ: </td>
                     <td>
-                        <select name="Ma_HSX" id="Ma_HSX">
-                            <?php while ($rows = mysqli_fetch_row($result_HSX))
+                        <select name="Ma_CV" id="Ma_CV">
+                            <?php while ($rows = mysqli_fetch_row($result_CV))
                                 echo "<option value='" . $rows[0] . "'>" . $rows[1] . "</option>";
                             ?>
                         </select>
                     </td>
-                    <td>Phân Loại: </td>
+                </tr>
+                <tr>
+                    <td>Tên KH: </td>
+                    <td><input type="text" id="Ten_KH" name="Ten_KH"></td>
+                    <td>Giới tính: </td>
                     <td>
                         <!-- <input type="text" id="loaiSua" name="loaiSua"> -->
-                        <select name="Ma_Loai" id="Ma_Loai">
-                            <?php while ($rows = mysqli_fetch_row($result_Loai))
-                                echo "<option value='" . $rows[0] . "'>" . $rows[1] . "</option>";
-                            ?>
+                        <select name="Gioi_Tinh" id="Gioi_Tinh">
+                            <option value="0">Nữ</option>
+                            <option value="1">Nam</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <!-- <td>Trong luong: </td>
                     <td><input type="text" id="trongLuong" name="trongLuong"></td> -->
-                    <td>Don gia: </td>
-                    <td> <input type="text" id="Don_Gia" name="Don_Gia"> </td>
+                    <td>Địa Chỉ: </td>
+                    <td> <input type="text" id="Dia_Chi" name="Dia_Chi"> </td>
                 </tr>
                 <tr>
-                    <td>Mô tả: </td>
-                    <td colspan="3"><textarea id="Mo_Ta" name="Mo_Ta" id="" cols="48" rows="5"></textarea></td>
+                    <td>Số điện thoại: </td>
+                    <td ><input type="tel" id="SDT" name="SDT"></td>
+                    <td>Email: </td>
+                    <td ><input type="text" id="Email" name="Email"></td>
                 </tr>
-                <!-- <tr>
-                    <td>Loi ich: </td>
-                    <td colspan="3"><textarea id="loiIch" name="loiIch" id="" cols="48" rows="5"></textarea></td>
-                </tr> 
+
                 <tr>
-                    <td>Hinh anh: </td>
-                    <td colspan="3"><input type="file" id="Hinh_Anh" name="Hinh_Anh" onchange="validateImage()"></td>
-                </tr>-->
+                    <td>Tài khoản: </td>
+                    <td ><input type="text" id="Tai_Khoan" name="Tai_Khoan"></td>
+                    <td>Mật Khẩu: </td>
+                    <td ><input type="text" id="Mat_Khau" name="Mat_Khau"></td>
+               </tr>
+                
                 <tr>
-                    <td>Hinh anh: </td>
-                    <td colspan="3"><input type="text" id="Hinh_Anh" name="Hinh_Anh"></td>
-                </tr>
-                <tr>
-                    <td colspan="4"> <p class="submit" name="submit" > Thêm</p></td>
-                </tr>
+                    <td >
+                        <p class="submit" name="submit"> Thêm</p>
+                    </td>
+                </tr>   
             </table>
         </form>
+
     </div>
+
 </div>
 
 
 <script>
     $(".submit").click(function() {
-        var Ma_SP = $('#Ma_SP').val();
-        var Ten_SP = $('#Ten_SP').val();
-        var Ma_HSX = $('#Ma_HSX').val();
-        var Ma_Loai = $('#Ma_Loai').val();
-        var Don_Gia = $('#Don_Gia').val();
-        var Mo_Ta = $('#Mo_Ta').val();
-        var Hinh_Anh = $('#Hinh_Anh').val();
-        console.log(Ma_SP,Ten_SP,Ma_HSX,Ma_Loai,Don_Gia,Mo_Ta,Hinh_Anh)
+        var Ma_KH = $('#Ma_KH').val();
+        var Ten_KH = $('#Ten_KH').val();
+        var Ma_CV = $('#Ma_CV').val();
+        var Dia_Chi = $('#Dia_Chi').val();
+        var Gioi_Tinh = $('#Gioi_Tinh').val();
+        var sdt = $('#SDT').val();
+        var Email = $('#Email').val();
+        var Tai_Khoan = $('#Tai_Khoan').val();
+        var Mat_Khau = $('#Mat_Khau').val();
 
         $.ajax({
-            url: "quanly/Add.php",
+            url: "quanly/AddKH.php",
             method: "POST",
             dataType: "json",
             data: {
-                Ma_SP: Ma_SP,
-                Ten_SP: Ten_SP,
-                Ma_HSX: Ma_HSX,
-                Ma_Loai: Ma_Loai,
-                Don_Gia: Don_Gia,
-                Mo_Ta: Mo_Ta,
-                Hinh_Anh: Hinh_Anh,
+                Ma_KH: Ma_KH,
+                Ten_KH: Ten_KH,
+                Ma_CV: Ma_CV,
+                Dia_Chi: Dia_Chi,
+                Gioi_Tinh : Gioi_Tinh,
+                sdt:sdt,
+                Email:Email,
+                Tai_Khoan: Tai_Khoan,
+                Mat_Khau: Mat_Khau,
             },
             error: function(response) {
                 console.log(response);
@@ -124,7 +125,7 @@ $conn->close();
             },
             success: function(response) {
                 console.log(response);
-                console.log("success");                
+                console.log("success");
                 $("#noti").text("Add success");
                 $("#noti").css("background-color", "#39FF14");
                 $("#noti").animate({
@@ -141,7 +142,7 @@ $conn->close();
 
 
     // function validateImage() {
-    //     let inputF = document.getElementById('Hinh_Anh');
+    //     let inputF = document.getElementById('Tai_Khoan');
     //     let inputFPath = inputF.value;
     //     let imgFormat = /(\.jpg|\.jpeg|\.png)$/i;
     //     if (!imgFormat.exec(inputFPath)) {
@@ -176,7 +177,7 @@ $conn->close();
     //         $('#noti').html('empty good')
     //         return false
     //     } else
-    //     if ($('#Hinh_Anh').val() == '') {
+    //     if ($('#Tai_Khoan').val() == '') {
     //         $('#noti').html('empty hinh')
     //         return false
     //     } else return true

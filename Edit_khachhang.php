@@ -9,11 +9,11 @@ $Ma_KH = $_GET['ID'];
 $conn = mysqli_connect('localhost', 'root', '', 'mango')
 
     or die('Could not connect to MySQL: ' . mysqli_connect_error());
-// Get SP
+// Get KH
 $sql = 'SELECT * FROM khach_hang WHERE Ma_KH = "' . $Ma_KH . '";';
 $result = mysqli_query($conn, $sql);
 
-//get HSX
+//get CV
 $sql_CV = 'SELECT Ma_CV, Ten_CV FROM chuc_vu;';
 $result_CV = mysqli_query($conn, $sql_CV);
 
@@ -27,7 +27,8 @@ if (isset($_POST['Sua'])) {
         SDT="' . $_POST["SDT"] . '",
         Email="' . $_POST["Email"] . '",
         Tai_Khoan="' . $_POST["Tai_Khoan"] . '",
-        Mat_Khau="' . @$_POST["Mat_Khau"] . '"
+        Mat_Khau="' . $_POST["Mat_Khau"] . '",
+        Ma_CV="' . $_POST["Ma_CV"] . '"
     WHERE Ma_KH="' . $Ma_KH . '";';
     if ($conn->query($sql) === TRUE) {
         $noti = "Sua thong tin thanh cong!";
@@ -118,7 +119,7 @@ $conn->close();
                     <tr>
                         <td>Chức vụ: </td>
                         <td>
-                            <select>
+                            <select name="Ma_CV">
                                 <?php while ($rows_CV = mysqli_fetch_row($result_CV)) {
                                     if ($rows_CV[0] == $rows[8]) {
                                         echo '<option selected="selected" value="' . $rows_CV[0] . '">' . $rows_CV[1] . '</option>';

@@ -14,7 +14,7 @@ include('includes/header.html');
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <img src="img/Layer1.png" alt="Los Angeles">
+                <img src="img/bgH.jpg" alt="Los Angeles">
             </div>
 
             <div class="item">
@@ -22,7 +22,7 @@ include('includes/header.html');
             </div>
 
             <div class="item">
-                <img src="https://images.unsplash.com/photo-1493655161922-ef98929de9d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1700&q=80" alt="New York">
+                <img src="img/bgD.jpg" alt="New York">
             </div>
         </div>
         <div class="infoCard" id="i4cHieu">
@@ -127,11 +127,6 @@ include('includes/header.html');
                     <ul>
                         <p class="tags" >Database</p>
                         <li><a target="_blank" href="BT_Tai/PHPMyAdmin/phantrang.php">Pagination</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
                     </ul>
                 </div>
             </div>
@@ -140,7 +135,7 @@ include('includes/header.html');
             <div class="card-contentWrap">
                 <div class="info">
                     <div class="avatar">
-                        <img src="img/avatarT2.jpg" alt="">
+                        <img src="img/avatarD.jpg" alt="">
                     </div>
                     <div class="cardName">
                         <p class="name">Nguyễn Hồng Đan<span class="id">61131611</span></p>
@@ -150,44 +145,40 @@ include('includes/header.html');
                 </div>
                 <div class="works">
                     <ul>
-                        <p class="tags" >Form</p>
-                        <li><a target="_blank" href="#2">Bai 1</a></li>
-                        <li><a target="_blank" href="#2">Bai 2</a></li>
-                        <li><a target="_blank" href="#2">Bai 3</a></li>
-                        <li><a target="_blank" href="#2">Bai 4</a></li>
+                        <p class="tags" >PHP</p>
+                        <li><a target="_blank" href="BT_Dan/BTtonghop/BTtiendien.php">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTtonghop/formchunhat.php">Bai 2</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTtonghop/pheptinh.php">Bai 3</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:right ;" >Array &nbsp</p>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 2</a></li>
-                        <li><a target="_blank" href="#">Bai 3</a></li>
-                        <li><a target="_blank" href="#">Bai 4</a></li>
-                        <li><a target="_blank" href="#">Bai 5</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTmangvschuoi/bt.php">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTmangvschuoi/bt2.php">Bai 2</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTmangvschuoi/bt4.php">Bai 4</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTmangvschuoi/bt5.php">Bai 5</a></li>
                     </ul>
                     <ul>
                         <p class="tags" style="text-align:left ;" > & String</p>
-                        <li><a target="_blank" href="#">Bai 7</a></li>
-                        <li><a target="_blank" href="#">Bai 6</a></li>
-                        <li><a target="_blank" href="#">Bai 8</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTmangvschuoi/bt6.php">Bai 6</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTmangvschuoi/bt7.php">Bai 7</a></li>
+                        <!-- <li><a target="_blank" href="#">Bai 8</a></li>
                         <li><a target="_blank" href="#">Bai 9</a></li>
                         <li><a target="_blank" href="#">Bai 10</a></li>
-                        <li><a target="_blank" href="#">2D Array</a></li>
+                        <li><a target="_blank" href="#">2D Array</a></li> -->
                         <!-- <li><a target="_blank" href="#">Bai 1</a></li> -->
                     </ul>
                     <ul>
                         <p class="tags" >OOP</p>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 2</a></li>
-                        <li><a target="_blank" href="#">Bai 3</a></li> 
+                        <li><a target="_blank" href="BT_Dan/bthuongdoituong/btnhanvien.php">Bai 1</a></li>
                     </ul>
                     <ul>
-                        <p class="tags" >Database</p>
+                        <p class="tags" >Home work</p>
+                        <li><a target="_blank" href="BT_Dan/BTvenha/bangcuuchuong.php">Bai 1</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTvenha/random.php">Bai 2</a></li>
+                        <li><a target="_blank" href="BT_Dan/BTvenha/tinhdientichvachuvi.php">Bai 3</a></li>
+                        <!-- <li><a target="_blank" href="#">Bai 1</a></li>
                         <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
-                        <li><a target="_blank" href="#">Bai 1</a></li>
+                        <li><a target="_blank" href="#">Bai 1</a></li> -->
                     </ul>
                 </div>
             </div>
