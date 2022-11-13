@@ -12,7 +12,7 @@ function login($userAccout, $userPassword)
 {
     global $noti;
     $sql = 'SELECT Mat_Khau, Ten_KH, Tai_Khoan FROM khach_hang
-            WHERE Tai_Khoan LIKE  "' . $userAccout . '";';
+            WHERE Tai_Khoan =  "' . $userAccout . '";';
     $KH = mysqli_query(connectDB(), $sql);
     $row = mysqli_fetch_row($KH);
     if ($row != null) {
@@ -33,7 +33,7 @@ function login($userAccout, $userPassword)
 function getUserName($userAccout)
 {
     $sql = 'SELECT Ten_KH FROM khach_hang
-            WHERE Tai_Khoan LIKE  "' . $userAccout . '";';
+            WHERE Tai_Khoan =  "' . $userAccout . '";';
     $KH = mysqli_query(connectDB(), $sql);
     $row = mysqli_fetch_row($KH);
     return $row[0];
@@ -44,6 +44,24 @@ function logout()
     unset($_SESSION['currentUser']);
     session_destroy();
 }
+
+function signUp($name, $sdt, $email, $username, $password){
+    global $noti;
+    $sql = 'INSERT INTO khach_hang (Ma_KH, Ten_KH, Gioi_Tinh, Dia_Chi, SDT, Email, Tai_Khoan, Mat_khau, Ma_CV) 
+            VALUES (NULL, "'.$name.'", "0", NULL, "'.$sdt.'", "'.$email.'", "'.$username.'", "'.$password.'", "KH");';
+   
+    if (connectDB()->query($sql)) {
+        $_SESSION['currentUser'] = getUserName($username);
+        $noti = "signup success";
+        return $noti;
+        // $response = "Data Added successfully";
+    } else {
+        $noti = "fails";
+        return $noti;
+        // $response = "Something is wrong: <br>" . $sql;
+    }
+}
+
 // login('kh001', '1111');
 //pagination
 // function pagination()

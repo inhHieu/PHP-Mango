@@ -81,12 +81,21 @@ $currentUser = $_SESSION['currentUser'] ?? 'null';
 				</ul> -->
 				</li>
 				<!-- get ele by JS then check html dang nhap ? add class, make class signout : default -->
-				<a id="logbtn" class="download"  href="/logOut.php"><?php echo $_SESSION['currentUser'] ?? 'Đăng Nhập' ?></a>
+				<!-- <a id="logbtn" class="download"  href="/logOut.php"><?php echo $_SESSION['currentUser'] ?? 'Đăng Nhập' ?></a> -->
+				<div class="person">
+				<a id="logbtn" class="download"  ><?php echo $_SESSION['currentUser'] ?? 'Đăng Nhập' ?></a>
+				
+					<div class="person-opt">
+						<div>Trang ca nhan</div>
+						<div>Dang xuat</div>
+					</div>
+				
+				</div>				
 			</ul>
 		</div>
 
 	</header>
 	<div id="content">
-		
+		<?php include_once('login.php');?>
 		<!-- Start of the page-specific content. -->
 		<!-- Script 9.1 - header.html -->

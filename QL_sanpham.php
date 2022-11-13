@@ -1,14 +1,19 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Welcome to this Site!';
 include('includes/header.html');
-include('controller.php');
+
 ?>
 
 <?php
-
-
+if($currentUser == 'null'){
+    echo '<script>',
+     "$('.modal-login').css('display','grid')",
+     '</script>'
+;
+}
 // Ket noi CSDL
-connectDB();
+$conn = mysqli_connect('localhost', 'root', '', 'mango')
+    or die('Could not connect to MySQL: ' . mysqli_connect_error());
 
 // set limit rows per page
 $results_per_page = 4;

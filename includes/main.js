@@ -84,7 +84,17 @@ if (loginbtn.textContent !== "Đăng Nhập") {
 	loginbtn.className='loged-in';
 	// loginbtn.attributes
 }
-
+$('.login-opt').click(function(){
+	$('.modal-login').css('display','grid')
+	$('.modal-signup').css('display','none')
+})
+$('.signup-opt').click(function(){
+	$('.modal-login').css('display','none')
+	$('.modal-signup').css('display','grid')
+})
+$('#logbtn').click(function(){
+	$('.modal-login').css('display','grid')
+})
 
 
 //members-------------------------
