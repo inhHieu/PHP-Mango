@@ -47,6 +47,10 @@ function logout()
 
 function signUp($name, $sdt, $email, $username, $password){
     global $noti;
+    // $sql='SELECT Ma_KH, Tai_Khoan, SDT, Email FROM khach_hang WHERE '
+
+
+
     $sql = 'INSERT INTO khach_hang (Ma_KH, Ten_KH, Gioi_Tinh, Dia_Chi, SDT, Email, Tai_Khoan, Mat_khau, Ma_CV) 
             VALUES (NULL, "'.$name.'", "0", NULL, "'.$sdt.'", "'.$email.'", "'.$username.'", "'.$password.'", "KH");';
    

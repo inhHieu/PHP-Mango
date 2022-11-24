@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
+ob_start();
 session_start();
 $currentUser = $_SESSION['currentUser'] ?? 'null';
 ?>
@@ -86,8 +87,8 @@ $currentUser = $_SESSION['currentUser'] ?? 'null';
 				<a id="logbtn" class="download"  ><?php echo $_SESSION['currentUser'] ?? 'Đăng Nhập' ?></a>
 				
 					<div class="person-opt">
-						<div>Trang ca nhan</div>
-						<div>Dang xuat</div>
+						<!-- <div><a href="">Home</a></div> -->
+						<div><a href="logout.php">Dang xuat</a></div>
 					</div>
 				
 				</div>				

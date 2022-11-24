@@ -62,6 +62,7 @@
             padding: 0 2em;
             text-decoration: none;
             color: black;
+            cursor: pointer;
         }
         .search-wrapper {
             overflow-y: hidden;
@@ -78,11 +79,16 @@
     }
     form {
         height: 100%;
+        #table-KH,
+        #table-SP {
+            min-height: 619px;
+        }
         table {
-            max-width: 1000px; //
+            // max-width: 1000px;
+            width: 1200px;
             border-collapse: separate;
             img {
-                max-width: 100px;
+                max-width: 90px;
             }
             thead {
                 tr {
@@ -118,7 +124,9 @@
                     }
                     .update,
                     .confirm,
-                    .delete {
+                    .delete,
+                    .confirm-add,
+                    .detail {
                         cursor: pointer;
                     }
                     .confirm {
@@ -130,6 +138,7 @@
                     }
                     td {
                         &:nth-last-child(-n + 4) {
+                            text-align: center;
                             border-top: none;
                             border-top-width: none;
                             border-top-style: none;
@@ -144,6 +153,9 @@
                             width: 100%;
                         }
                     }
+                }
+                #add {
+                    visibility: collapse;
                 }
             }
         }
@@ -162,7 +174,6 @@
         width: 100%;
         height: min-content;
         table {
-            
             max-width: 1000px;
             thead {
                 tr {
@@ -189,13 +200,15 @@
                 height: 100px;
                 resize: none;
             }
-            input,select,textarea {
+            input,
+            select,
+            textarea {
                 border-radius: 7px;
                 border: thin solid black;
-                 outline: none;
-                 padding: .5em;
+                outline: none;
+                padding: 0.5em;
             }
-            .submit{
+            .submit {
                 background-color: black;
                 color: white;
                 margin: 0 0 10px;
@@ -207,11 +220,115 @@
         }
     }
     .SP-img {
+        margin-right: 20px;
         width: 500px;
         height: min-content;
         img {
             width: 100%;
             height: 100%;
         }
+    }
+}
+.modal-detail {
+    background: #fffaf0;
+    // position: fixed;
+    width: 1000px;
+    min-height: 400px;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; // display: none;
+    input {
+        border: none;
+        outline: none;
+        &:focus {
+            background-color: #000000;
+            color: white;
+        }
+    }
+    .info-wrap {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        width: 100%;
+        height: 60px;
+        align-items: center;
+        .receipt {
+            font-size: 2.5em;
+            // background-color: coral;
+            margin: 0 auto;
+        }
+        .tb-info {
+            // background: yellow;
+            width: 50%;
+            margin: 0 auto;
+            thead {
+                text-align: center;
+                tr {
+                    td {
+                    }
+                }
+            }
+        }
+    }
+
+    .tb-detail {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        // background: green;
+        thead {
+            font-weight: bold;
+            border-bottom: thin solid black;
+            padding: 20px;
+        }
+        tbody {
+            margin-top: 100px;
+        }
+        tfoot {
+            font-weight: bold;
+            line-height: 50px;
+            tr {
+                td {
+                    .add-more {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        #suggesstion-box {
+            ul {
+                padding: 0;
+                position: absolute;
+                background: #ffffff;
+                width: 280px;
+                &::before {
+                    content: none;
+                }
+                li {
+                    padding: 5px 0;
+                    list-style: none;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #b9b9b9;
+                    }
+                }
+            }
+        }
+    }
+    .add-hd {
+        margin-left: 850px;
+        display: block;
+        background-color: #fff200;
+        border: none;
+        padding: 0 2em;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        width: min-content;
+        height: 3em;
+        border-radius: 7px;
+        line-height: 3em;
     }
 }

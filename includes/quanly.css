@@ -66,6 +66,7 @@
   padding: 0 2em;
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 .right-content .filter-wrapper .search-wrapper {
   overflow-y: hidden;
@@ -81,12 +82,16 @@
 .right-content form {
   height: 100%;
 }
+.right-content form #table-KH,
+.right-content form #table-SP {
+  min-height: 619px;
+}
 .right-content form table {
-  max-width: 1000px;
+  width: 1200px;
   border-collapse: separate;
 }
 .right-content form table img {
-  max-width: 100px;
+  max-width: 90px;
 }
 .right-content form table thead tr th {
   border-bottom: none;
@@ -111,7 +116,9 @@
 }
 .right-content form table tbody tr .update,
 .right-content form table tbody tr .confirm,
-.right-content form table tbody tr .delete {
+.right-content form table tbody tr .delete,
+.right-content form table tbody tr .confirm-add,
+.right-content form table tbody tr .detail {
   cursor: pointer;
 }
 .right-content form table tbody tr .confirm {
@@ -129,6 +136,7 @@
   vertical-align: middle;
 }
 .right-content form table tbody tr td:nth-last-child(-n+4) {
+  text-align: center;
   border-top: none;
   border-top-width: none;
   border-top-style: none;
@@ -136,6 +144,9 @@
 }
 .right-content form table tbody tr td input {
   width: 100%;
+}
+.right-content form table tbody #add {
+  visibility: collapse;
 }
 
 .center {
@@ -174,7 +185,9 @@
   height: 100px;
   resize: none;
 }
-.center form table input, .center form table select, .center form table textarea {
+.center form table input,
+.center form table select,
+.center form table textarea {
   border-radius: 7px;
   border: thin solid black;
   outline: none;
@@ -192,6 +205,7 @@
   cursor: pointer;
 }
 .center .SP-img {
+  margin-right: 20px;
   width: 500px;
   height: -webkit-min-content;
   height: -moz-min-content;
@@ -200,4 +214,91 @@
 .center .SP-img img {
   width: 100%;
   height: 100%;
+}
+
+.modal-detail {
+  background: #fffaf0;
+  width: 1000px;
+  min-height: 400px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.modal-detail input {
+  border: none;
+  outline: none;
+}
+.modal-detail input:focus {
+  background-color: #000000;
+  color: white;
+}
+.modal-detail .info-wrap {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+}
+.modal-detail .info-wrap .receipt {
+  font-size: 2.5em;
+  margin: 0 auto;
+}
+.modal-detail .info-wrap .tb-info {
+  width: 50%;
+  margin: 0 auto;
+}
+.modal-detail .info-wrap .tb-info thead {
+  text-align: center;
+}
+.modal-detail .tb-detail {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.modal-detail .tb-detail thead {
+  font-weight: bold;
+  border-bottom: thin solid black;
+  padding: 20px;
+}
+.modal-detail .tb-detail tbody {
+  margin-top: 100px;
+}
+.modal-detail .tb-detail tfoot {
+  font-weight: bold;
+  line-height: 50px;
+}
+.modal-detail .tb-detail tfoot tr td .add-more {
+  cursor: pointer;
+}
+.modal-detail .tb-detail #suggesstion-box ul {
+  padding: 0;
+  position: absolute;
+  background: #ffffff;
+  width: 280px;
+}
+.modal-detail .tb-detail #suggesstion-box ul::before {
+  content: none;
+}
+.modal-detail .tb-detail #suggesstion-box ul li {
+  padding: 5px 0;
+  list-style: none;
+  cursor: pointer;
+}
+.modal-detail .tb-detail #suggesstion-box ul li:hover {
+  background-color: #b9b9b9;
+}
+.modal-detail .add-hd {
+  margin-left: 850px;
+  display: block;
+  background-color: #fff200;
+  border: none;
+  padding: 0 2em;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: 3em;
+  border-radius: 7px;
+  line-height: 3em;
 }/*# sourceMappingURL=quanly.css.map */

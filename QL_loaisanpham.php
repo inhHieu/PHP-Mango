@@ -21,16 +21,12 @@ $results_per_page = 4;
 if (trim(isset($_GET['search'])) != '') {
     $search_raw = $_GET['search'];
     $search = str_replace(' ', '%', $search_raw);
-    $HSX = $_GET['hangSX'];
-    $LSP = $_GET['LoaiSP'];
-    $HSX ==''? $HSX_sql ='' : $HSX_sql = 'AND Ma_HSX = "' . $HSX . '"';
-    $LSP ==''? $LSP_sql ='' : $LSP_sql = 'AND Ma_Loai = "' . $LSP . '"';
-    $sql = 'SELECT Ten_SP, Hinh_Anh, Don_Gia, Ma_SP, Ma_HSX, Ma_Loai, Mo_Ta
-                    FROM san_pham
-                    WHERE Ten_SP LIKE "%' . $search . '%"                    
-                    ' . $HSX_sql . $LSP_sql . ';';
-} else    $sql = 'SELECT Ten_SP, Hinh_Anh, Don_Gia, Ma_SP, Ma_HSX, Ma_Loai, Mo_Ta
-                FROM san_pham;';
+    $sql = 'SELECT *
+        FROM loai_sp
+        WHERE Ten_Loai 
+        LIKE "%' . $search . '%";';
+} else    $sql = '  SELECT *
+                    FROM loai_sp;';
 $result = mysqli_query(connectDB(), $sql);
 $number_of_result = mysqli_num_rows($result);
 
@@ -51,21 +47,17 @@ $page_first_result = ($page - 1) * $results_per_page;
 if (trim(isset($_GET['search'])) != '') {
     $search_raw = $_GET['search'];
     $search = str_replace(' ', '%', $search_raw);
-    $HSX = $_GET['hangSX'];
-    $LSP = $_GET['LoaiSP'];
-    $HSX ==''? $HSX_sql ='' : $HSX_sql = 'AND Ma_HSX = "' . $HSX . '"';
-    $LSP ==''? $LSP_sql ='' : $LSP_sql = 'AND Ma_Loai = "' . $LSP . '"';
-
-    $sql = 'SELECT Ten_SP, Hinh_Anh, Don_Gia, Ma_SP, Ma_HSX, Ma_Loai, Mo_Ta
-                    FROM san_pham
-                    WHERE Ten_SP LIKE "%' . $search . '%"
-                    ' . $HSX_sql . $LSP_sql . '
-                    LIMIT ' . $page_first_result . ',' . $results_per_page;
+    $sql = 'SELECT *
+        FROM loai_sp
+        WHERE Ten_Loai 
+        LIKE "%' . $search . '%" 
+        LIMIT ' . $page_first_result . ',' . $results_per_page;
     //get the lil noti
     $noti = 'Co ' . $number_of_result . ' ket qua trung khop';
     if ($number_of_result == 0)         $noti = 'Khong co ket qua trung khop';
-} else    $sql = 'SELECT Ten_SP, Hinh_Anh, Don_Gia, Ma_SP, Ma_HSX, Ma_Loai, Mo_Ta
-                FROM san_pham  LIMIT ' . $page_first_result . ',' . $results_per_page;
+} else    $sql = '   SELECT *
+                    FROM loai_sp  
+                    LIMIT ' . $page_first_result . ',' . $results_per_page;
 $result = mysqli_query(connectDB(), $sql);
 connectDB()->close();
 //CSDL^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -78,88 +70,64 @@ connectDB()->close();
     <div class="noti" id="noti">some text</div>
 
     <div class="right-content">
-        <form action="QL_sanpham.php" method="GET" id="myForm">
-            <table id="table-SP" class='table '>
+        <form action="QL_loaisanpham.php" method="GET" id="myForm">
+            <table id="table" class='table '>
                 <div class="filter-wrapper">
-                    <div class="filter">
-                        Loại SP: <select name="LoaiSP">
-                            <option value="">Tất cả</option>
-                            <option value="AK">Áo Khoác</option>
-                            <option value="AO">Áo</option>
-                            <option value="GI">Giày</option>
-                            <option value="MU">Nón</option>
-                            <option value="QU">Quần</option>
-                            <option value="PK">Phụ kiện</option>
-                            <option value="TS">Trang Sức</option>
-                        </select>
-                    </div>
-                    <div class="filter">
-                        Hãng: <select name="hangSX">
-                            <option value="">Tất cả</option>
-                            <option value="DAZY">DAZY </option>
-                            <option value="MOTF">MOTF</option>
-                            <option value="ROMWE">ROMWE</option>
-                            <option value="ZIAI">ZIAI</option>
-                        </select>
-                    </div>
                     <div class="filter search-wrapper">
-                        <input type="search" class="search" placeholder="Tên SP" name="search" value="<?= @$search_raw ?>">
+                        <input type="search" class="search" placeholder="Tên Loại sản phẩm" name="search" value="<?= @$search_raw ?>">
                         <button type="submit" value="Tim">
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
-                    <a href="ADD_sanpham.php" class="add filter">Thêm mới</a>
                     <p><?= @$noti ?></p>
+                    <a class="add filter" id="add-btn">Thêm mới</a>
                 </div>
                 <thead>
-                    <th></th>
-                    <th>Tên SP</th>
-                    <th>Loại SP</th>
-                    <th>Hãng SX</th>
-                    <th>Đơn giá</th>
+                    <th style="width: 300px ;">Mã loại SP</th>
+                    <th style="width: 300px ;">Tên Loại SP</th>
                 </thead>
                 <tbody>
                     <?php
-
-
                     if (mysqli_num_rows($result) <> 0) {
                         $stt = 1;
                         while ($rows = mysqli_fetch_row($result)) {
                     ?>
                             <tr>
-                                <td class="id" id="Ma_SP">
-                                    <input type='text' name='Ma_SP' value='<?= $rows[3] ?>'>
+                                <td class="input" id="Ma_Loai">
+                                    <input type='text' class='inpt' name='Ma_Loai' value='<?= $rows[0] ?>' disabled>
                                 </td>
-                                <td>
-                                    <img src="<?= $rows[1] ?>" alt="">
+
+                                <td class='input' id="Ten_Loai" style="width:300px ;">
+                                    <input type='text' class='inpt' name='Ten_Loai' value="<?= $rows[1] ?>" disabled>
                                 </td>
-                                <td class='input' id="tenSP" style="width:300px ;">
-                                    <input type='text' class='inpt' name='tenSP' value="<?= $rows[0] ?>" disabled>
-                                </td>
-                                <td class='input' id="loaiSP">
-                                    <input type='text' class='inpt' name='loaiSP' value='<?= $rows[5] ?>' disabled>
-                                </td>
-                                <td class='input' id="hangSX">
-                                    <input type='text' class='inpt' name='hangSX' value='<?= $rows[4] ?>' disabled>
-                                </td>
-                                <td class='input' id="donGia">
-                                    <input type='text' class='inpt' name='donGia' value='<?= $rows[2] ?>' disabled>
-                                </td>
-                                <td class="confirm">
-                                    <i class="fa fa-check" aria-hidden="true"></i>
-                                </td>
-                                <td class='update'>
-                                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                                </td>
-                                <td class="delete">
+
+                                <td class="delete" style="width: 30px ;">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </td>
-                                <td><a href='Edit_sanpham.php?ID=<?= $rows[3] ?>'>Edit</a></td>
+
+                                <td style="width: 1px ;"></td>
+                                <td style="width: 1px ;"></td>
+                                <td style="width: 1px ;"></td>
                             </tr>
                     <?php
                         }
                     }
                     ?>
+                    <tr id="add">
+                        <td class="input" id="Ma_Loai_Add">
+                            <input type='text' class='inpt active-inpt' name='Ma_Loai' value=''>
+                        </td>
+
+                        <td class='input' id="Ten_Loai_Add" style="width:300px ;">
+                            <input type='text' class='inpt active-inpt' name='Ten_Loai' value="">
+                        </td>
+                        <td class="confirm-add">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                        </td>
+                        <td style="width: 1px ;"></td>
+                        <td style="width: 1px ;"></td>
+                        <td style="width: 1px ;"></td>
+                    </tr>
                 </tbody>
                 <?php
                 if ($number_of_result != 0) {
@@ -168,24 +136,24 @@ connectDB()->close();
                         //page link
                         echo '<div class="redirect" style="margin: 0 auto">';
                         //redirect to first
-                        echo '<a onclick="submit()" href = "  QL_sanpham.php?page=' . 1 . '&search=' . $search . '&LoaiSP=' . $LSP . '&hangSX=' . $HSX . '"> << </a>&nbsp';
+                        echo '<a onclick="submit()" href = "  QL_loaisanpham.php?page=' . 1 . '&search=' . $search . '"> << </a>&nbsp';
                         //redirect to previous
                         if ($page > 1) {
-                            echo '<a onclick="submit()" href = "  QL_sanpham.php?page=' . $page - 1 . '&search=' . $search . '&LoaiSP=' . $LSP . '&hangSX=' . $HSX . '"> < </a>&nbsp';
+                            echo '<a onclick="submit()" href = "  QL_loaisanpham.php?page=' . $page - 1 . '&search=' . '"> < </a>&nbsp';
                         } else echo '<span> <&nbsp </span>';
                         //page link group
                         for ($index = 1; $index <= $number_of_page; $index++) {
                             if ($index == $page)
                                 echo '<span>' . $index . '&nbsp</span>';
                             else
-                                echo '<a onclick="submit()" href = "  QL_sanpham.php?page=' . $index . '&search=' . $search . '&LoaiSP=' . $LSP . '&hangSX=' . $HSX . '">' . $index . '&nbsp</a>';
+                                echo '<a onclick="submit()" href = "  QL_loaisanpham.php?page=' . $index . '&search=' . '">' . $index . '&nbsp</a>';
                         }
                         //redirect to next
                         if ($page < $number_of_page) {
-                            echo '&nbsp<a onclick="submit()" href = " QL_sanpham.php?page=' . $page + 1 . '&search=' . $search . '&LoaiSP=' . $LSP . '&hangSX=' . $HSX . '"> > </a>';
+                            echo '&nbsp<a onclick="submit()" href = " QL_loaisanpham.php?page=' . $page + 1 . '&search=' . '"> > </a>';
                         } else echo '<span> &nbsp> </span>';
                         //redirect to last
-                        echo '&nbsp<a onclick="submit()" href = " QL_sanpham.php?page=' . $number_of_page . '&search=' . $search . '&LoaiSP=' . $LSP . '&hangSX=' . $HSX . '"> >> </a>';
+                        echo '&nbsp<a onclick="submit()" href = " QL_loaisanpham.php?page=' . $number_of_page . '&search=' . '"> >> </a>';
                         echo '</div>';
                         echo '</td></tr>';
                     } else {
@@ -193,24 +161,24 @@ connectDB()->close();
                         //page link
                         echo '<div class="redirect" style="margin: 0 auto">';
                         //redirect to first
-                        echo '<a onclick="submit()" href = "  QL_sanpham.php?page=' . 1 . '"> << </a>&nbsp';
+                        echo '<a onclick="submit()" href = "  QL_loaisanpham.php?page=' . 1 . '"> << </a>&nbsp';
                         //redirect to previous
                         if ($page > 1) {
-                            echo '<a onclick="submit()" href = "  QL_sanpham.php?page=' . $page - 1 . '"> < </a>&nbsp';
+                            echo '<a onclick="submit()" href = "  QL_loaisanpham.php?page=' . $page - 1 . '"> < </a>&nbsp';
                         } else echo '<span> <&nbsp </span>';
                         //page link group
                         for ($index = 1; $index <= $number_of_page; $index++) {
                             if ($index == $page)
                                 echo '<span>' . $index . '&nbsp</span>';
                             else
-                                echo '<a onclick="submit()" href = "  QL_sanpham.php?page=' . $index . '">' . $index . '&nbsp</a>';
+                                echo '<a onclick="submit()" href = "  QL_loaisanpham.php?page=' . $index . '">' . $index . '&nbsp</a>';
                         }
                         //redirect to next
                         if ($page < $number_of_page) {
-                            echo '&nbsp<a onclick="submit()" href = " QL_sanpham.php?page=' . $page + 1 . '"> > </a>';
+                            echo '&nbsp<a onclick="submit()" href = " QL_loaisanpham.php?page=' . $page + 1 . '"> > </a>';
                         } else echo '<span> &nbsp> </span>';
                         //redirect to last
-                        echo '&nbsp<a onclick="submit()" href = " QL_sanpham.php?page=' . 1 . '"> >> </a>';
+                        echo '&nbsp<a onclick="submit()" href = " QL_loaisanpham.php?page=' . 1 . '"> >> </a>';
                         echo '</div>';
                         echo '</td></tr>';
                     }
@@ -228,11 +196,11 @@ connectDB()->close();
 <script src="includes/quanly.js"></script>
 <script>
     $(".delete").click(function() {
-        var Ma_SP = $(this).siblings(".id#Ma_SP").children().val();
-        var tenSP = $(this).siblings(".input#tenSP").children().val();
-        console.log(Ma_SP);
+        var Ma_Loai = $(this).siblings(".input#Ma_Loai").children().val();
+        var Ten_Loai = $(this).siblings(".input#Ten_Loai").children().val();
+        console.log(Ma_Loai);
         $.confirm({
-            title: "Delete " + tenSP,
+            title: "Delete " + Ten_Loai,
             content: "This action cannot be undo!!!",
             type: "red",
             backgroundDismiss: true,
@@ -245,11 +213,11 @@ connectDB()->close();
                     btnClass: "btn-red",
                     action: function() {
                         $.ajax({
-                            url: "quanly/Delete.php",
+                            url: "quanly/DeleteLSP.php",
                             method: "POST",
                             dataType: "json",
                             data: {
-                                Ma_SP: Ma_SP,
+                                Ma_Loai: Ma_Loai,
                             },
                             error: function(response) {
                                 console.log(response);
@@ -279,7 +247,7 @@ connectDB()->close();
                                     .animate({
                                         top: "105vh"
                                     });
-                                setTimeout(reload, 3000);
+                                setTimeout(reload, 2000);
                             },
                         });
                     },
@@ -293,26 +261,24 @@ connectDB()->close();
     function reload() {
         location.reload(true);
     }
+    $('#add-btn').click(function() {
+        $('#add').css("visibility", "visible");
+    })
 
-    $(".confirm").click(function() {
+
+
+    $(".confirm-add").click(function() {
         var myConfirm = $(this);
-        var Ma_SP = $(this).siblings(".id#Ma_SP").children().val();
-        var tenSP = $(this).siblings(".input#tenSP").children().val();
-        var loaiSP = $(this).siblings(".input#loaiSP").children().val();
-        var hangSX = $(this).siblings(".input#hangSX").children().val();
-        var donGia = $(this).siblings(".input#donGia").children().val();
-        console.log(hangSX);
+        var Ma_Loai = $(this).siblings(".input#Ma_Loai_Add").children().val();
+        var Ten_Loai = $(this).siblings(".input#Ten_Loai_Add").children().val();
 
         $.ajax({
-            url: "quanly/Update.php",
+            url: "quanly/AddLSP.php",
             method: "POST",
             dataType: "json",
             data: {
-                Ma_SP: Ma_SP,
-                tenSP: tenSP,
-                loaiSP: loaiSP,
-                hangSX: hangSX,
-                donGia: donGia,
+                Ma_Loai: Ma_Loai,
+                Ten_Loai: Ten_Loai,
             },
             error: function(response) {
                 console.log(response);
@@ -343,6 +309,7 @@ connectDB()->close();
                 }).delay(3000).animate({
                     top: "105vh"
                 });
+                setTimeout(reload, 2000);
             },
         });
     });

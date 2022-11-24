@@ -1,9 +1,13 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Welcome to this Site!';
 include('includes/header.html');
-include('controller.php');
 ?>
 <?php
+if ($currentUser == 'null') {
+    echo '<script>',
+    "$('.modal-login').css('display','grid')",
+    '</script>';
+}
 $Ma_KH = $_GET['ID'];
 // Ket noi CSDL
 $conn = mysqli_connect('localhost', 'root', '', 'mango')
@@ -41,7 +45,7 @@ if (isset($_POST['Sua'])) {
     $sql = 'DELETE FROM khach_hang 
         WHERE Ma_KH="' . $Ma_KH . '";';
     if ($conn->query($sql) === TRUE) {
-        $noti = "Sua thong tin thanh cong!";
+        $noti = "Xoa thong tin thanh cong!";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

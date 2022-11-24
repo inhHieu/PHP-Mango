@@ -4,7 +4,11 @@ include('includes/header.html');
 ?>
 
 <?php
-
+if ($currentUser == 'null') {
+    echo '<script>',
+    "$('.modal-login').css('display','grid')",
+    '</script>';
+}
 // Ket noi CSDL
 $conn = mysqli_connect('localhost', 'root', '', 'mango')
     or die('Could not connect to MySQL: ' . mysqli_connect_error());
